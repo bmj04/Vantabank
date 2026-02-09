@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: rgb(44,44,44);" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Application.Controller.AdminController">
+   <children>
+      <BorderPane layoutX="20.0" layoutY="26.0" prefHeight="450.0" prefWidth="760.0" style="-fx-background-color: rgb(29,29,29); -fx-background-radius: 15;" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="26.0">
+         <top>
+            <Pane prefHeight="100.0" prefWidth="758.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Text fx:id="welcomeMessage" fill="#ffffff80" layoutX="293.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: 600;" text="PANEL ADMIN" textAlignment="CENTER">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#ffffff80" layoutX="194.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: 600;" text="COMMANDES">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="date" fill="#ffffff80" layoutX="669.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DATA TIME" />
+                  <Button fx:id="deconnect" layoutX="34.0" layoutY="17.0" mnemonicParsing="false" opacity="0.75" stylesheets="@style.css" text="DÉCONNEXION" textFill="#ffffff80">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Button>
+                  <Text fill="#ffffff80" layoutX="526.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: 600;" text="TRANSACTION GLOBALES">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="-80.0" top="20.0" />
+               </BorderPane.margin>
+            </Pane>
+         </top>
+         <left>
+            <BorderPane fx:id="rightBorderPane" prefHeight="325.0" prefWidth="454.0" style="-fx-background-color: rgb(42,42,42,0.75); -fx-background-radius: 15;" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets bottom="20.0" left="15.0" right="15.0" top="75.0" />
+               </BorderPane.margin>
+               <left>
+                  <GridPane prefWidth="200.0" translateX="20.0" BorderPane.alignment="CENTER">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="26.0" minHeight="10.0" prefHeight="16.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="48.0" minHeight="6.0" prefHeight="6.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="72.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="67.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="35.0" minHeight="8.0" prefHeight="22.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="50.0" minHeight="8.0" prefHeight="9.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="55.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="54.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <BorderPane.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </BorderPane.margin>
+                     <children>
+                        <Text fill="#ffffff80" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: 600;" text="GESTION CLIENT" textAlignment="CENTER" wrappingWidth="202.3046875">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Pane prefHeight="37.0" prefWidth="200.0" scaleY="0.25" style="-fx-background-color: rgb(19,19,19,0.75); -fx-background-radius: 15;" GridPane.rowIndex="1" />
+                        <Button fx:id="gererClient" mnemonicParsing="false" prefHeight="54.0" prefWidth="192.0" style="-fx-background-color: rgb(31,31,31,0.75); -fx-background-radius: 5;" stylesheets="@style.css" text="GÉRER CLIENT" textFill="#ffffff80" translateX="4.0" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="creerCompte" layoutX="10.0" layoutY="38.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="192.0" style="-fx-background-color: rgb(31,31,31,0.75); -fx-background-radius: 5;" stylesheets="@style.css" text="CRÉER CLIENT" textFill="#ffffff80" translateX="4.0" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets top="5.0" />
+                           </GridPane.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Text fill="#ffffff80" layoutX="10.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: 600;" text="GESTION COMPTE" textAlignment="CENTER" wrappingWidth="202.3046875" GridPane.rowIndex="4">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets top="5.0" />
+                           </GridPane.margin>
+                        </Text>
+                        <Pane prefHeight="60.0" prefWidth="190.0" scaleY="0.25" style="-fx-background-color: rgb(19,19,19,0.75); -fx-background-radius: 15;" GridPane.rowIndex="5">
+                           <GridPane.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </GridPane.margin>
+                        </Pane>
+                        <Button fx:id="gererCompte" layoutX="10.0" layoutY="56.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="192.0" style="-fx-background-color: rgb(31,31,31,0.75); -fx-background-radius: 5;" stylesheets="@style.css" text="GÉRER COMPTE" textFill="#ffffff80" translateX="4.0" GridPane.rowIndex="6">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="remplirGuichet" layoutX="10.0" layoutY="179.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="192.0" style="-fx-background-color: rgb(31,31,31,0.75); -fx-background-radius: 5;" stylesheets="@style.css" text="REMPLIR GUICHET" textFill="#ffffff80" translateX="4.0" GridPane.rowIndex="7">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets top="5.0" />
+                           </GridPane.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="payerInteret" layoutX="10.0" layoutY="227.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="192.0" style="-fx-background-color: rgb(31,31,31,0.75); -fx-background-radius: 5;" stylesheets="@style.css" text="COMMANDES GLOB." textFill="#ffffff80" translateX="4.0" GridPane.rowIndex="8">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets top="5.0" />
+                           </GridPane.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </GridPane>
+               </left>
+               <right>
+                  <GridPane fx:id="gestion" prefHeight="251.0" prefWidth="205.0" style="-fx-background-color: rgb(49,49,49,0.75); -fx-background-radius: 15;" BorderPane.alignment="CENTER">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="97.0" minHeight="0.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="186.0" minHeight="10.0" prefHeight="172.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="88.0" minHeight="10.0" prefHeight="59.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <BorderPane.margin>
+                        <Insets bottom="10.0" right="15.0" top="45.0" />
+                     </BorderPane.margin>
+                     <children>
+                        <TextField fx:id="rechercheField" prefHeight="5.0" prefWidth="205.0" promptText="RECHERCHE " style="-fx-background-color: rgb(27,27,27,0.75); -fx-background-radius: 15;" stylesheets="@style.css">
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font size="9.0" />
+                           </font>
+                        </TextField>
+                        <Pane fx:id="info" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: rgb(31,31,31,0.75); -fx-background-radius: 5;" visible="false" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </GridPane.margin>
+                           <children>
+                              <Text fx:id="balanceText" fill="#ffffff80" layoutX="117.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: 600;" text="BALANCE" textAlignment="CENTER" translateY="5.0" wrappingWidth="61.3046875">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="type" fill="#ffffff80" layoutX="14.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: 600;" text="CHEQUE" translateX="-5.0" translateY="1.0" wrappingWidth="143.3046875">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="valeur0" fill="WHITE" layoutX="117.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: 600;" text="MONTANT" textAlignment="CENTER" wrappingWidth="61.3046875" />
+                              <Text fx:id="info1" fill="#ffffff80" layoutX="9.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: 600;" text="RETRAIX MAX" wrappingWidth="86.3046875">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="info2" fill="#ffffff80" layoutX="9.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: 600;" text="TRANSFERT MAX" wrappingWidth="86.3046875">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="value1" fill="WHITE" layoutX="12.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: 600;" text="MONTANT" translateX="-3.0" translateY="16.0" wrappingWidth="167.30463409423828">
+                                 <font>
+                                    <Font size="8.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="value2" fill="WHITE" layoutX="9.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: 600;" text="MONTANT" translateX="1.0" translateY="12.0" wrappingWidth="169.97138214111328">
+                                 <font>
+                                    <Font size="8.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="noText" fill="#ffffff80" layoutX="10.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: 600;" text="NO COMPTE" textAlignment="CENTER" wrappingWidth="61.3046875">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <Pane layoutX="9.0" layoutY="153.0" prefHeight="7.5" prefWidth="125.0" style="-fx-background-color: rgb(45,45,45); -fx-background-radius: 15;">
+                                 <children>
+                                    <Text fx:id="noTextValue" fill="#ffffff80" layoutX="4.0" layoutY="6.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: 600;" text="0" wrappingWidth="48.0546875">
+                                       <font>
+                                          <Font size="6.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </Pane>
+                              <Pane layoutX="141.0" layoutY="153.0" prefHeight="7.5" prefWidth="30.0" style="-fx-background-color: rgb(45,45,45); -fx-background-radius: 15;">
+                                 <children>
+                                    <Text fx:id="nip" fill="#ffffff80" layoutX="2.0" layoutY="6.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: 600;" text="0" wrappingWidth="26.8046875">
+                                       <font>
+                                          <Font size="6.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </Pane>
+                              <Text fill="#ffffff80" layoutX="145.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: 600;" text="NIP" textAlignment="CENTER" translateX="-2.0" translateY="-6.5" wrappingWidth="22.3046875">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <ImageView fx:id="image" fitHeight="15.0" fitWidth="15.0" layoutX="160.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true" visible="false" />
+                           </children>
+                        </Pane>
+                        <Button fx:id="supprimer" mnemonicParsing="false" style="-fx-background-color: rgb(31,31,31,0.75); -fx-background-radius: 5;" stylesheets="@style.css" text="SUPPRIMER" textFill="#ffffff80" translateX="10.0" translateY="-12.5" visible="false" GridPane.rowIndex="2">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="verouiller" layoutX="10.0" layoutY="238.0" mnemonicParsing="false" style="-fx-background-color: rgb(31,31,31,0.75); -fx-background-radius: 5;" stylesheets="@style.css" text="VÉROUILLER" textFill="#ffffff80" translateX="95.0" translateY="-12.5" visible="false" GridPane.rowIndex="2">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <ScrollPane fx:id="clients" hbarPolicy="NEVER" hmax="0.0" prefHeight="200.0" prefWidth="205.0" style="-fx-background-color: rgb(1,1,1,0); -fx-border-color: rgb(2,2,2,0);" stylesheets="@style.css" visible="false" vmax="10.0" vmin="8.75" GridPane.rowIndex="1">
+                           <content>
+                              <AnchorPane fx:id="holderClients" minHeight="0.0" minWidth="0.0" prefHeight="700.0" prefWidth="202.0" translateY="3725.0" />
+                           </content>
+                        </ScrollPane>
+                        <Text fx:id="msgErreurPane" fill="#d75959" strokeType="OUTSIDE" strokeWidth="0.0" text="[INSERT ERROR]" textAlignment="CENTER" translateY="15.0" visible="false" wrappingWidth="208.13671875" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Text>
+                        <Pane fx:id="createPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: rgb(32,32,32,0.5); -fx-background-radius: 5;" visible="false" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </GridPane.margin>
+                           <children>
+                              <Text fill="#ffffffbf" layoutX="63.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CRÉER CLIENT">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="prenomField" layoutX="23.0" layoutY="41.0" prefWidth="149.0" promptText="PRÉNOM" style="-fx-background-color: rgb(24,24,24);" stylesheets="@style.css" translateY="3.0">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="nomField" layoutX="23.0" layoutY="60.0" prefHeight="19.0" prefWidth="149.0" promptText="NOM" style="-fx-background-color: rgb(24,24,24);" stylesheets="@style.css" translateY="5.0">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="courrielField" layoutX="23.0" layoutY="75.0" prefHeight="19.0" prefWidth="149.0" promptText="COURRIEL" style="-fx-background-color: rgb(24,24,24);" stylesheets="@style.css" translateY="11.0">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="telephoneField" layoutX="23.0" layoutY="93.0" prefHeight="19.0" prefWidth="149.0" promptText="TÉLÉPHONE" style="-fx-background-color: rgb(24,24,24);" stylesheets="@style.css" translateY="14.0">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </TextField>
+                              <Pane layoutX="3.0" layoutY="169.0" prefHeight="4.0" prefWidth="192.0" style="-fx-background-color: rgb(15,15,15); -fx-background-radius: 15;" translateX="-2.0" translateY="-2.0" />
+                              <PasswordField fx:id="nipField" layoutX="23.0" layoutY="138.0" prefHeight="0.0" prefWidth="149.0" promptText="NIP" style="-fx-background-color: rgb(24,24,24);" translateY="-10.0">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </PasswordField>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="guichetPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: rgb(35,35,35); -fx-background-radius: 5;" visible="false" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </GridPane.margin>
+                           <children>
+                              <Text fill="#ffffffbf" layoutX="38.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MONTANT GUICHET" />
+                              <Text fx:id="montantGuichet" fill="WHITE" layoutX="-1.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MONTANT" textAlignment="CENTER" wrappingWidth="187.08984375" />
+                              <Button fx:id="confirmer" layoutX="31.0" layoutY="132.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="124.0" style="-fx-background-color: rgb(55,55,55);" stylesheets="@style.css" text="REMPLIR GUICHET" textFill="WHITE" />
+                              <Text fill="WHITE" layoutX="68.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DIFFERENCE" textAlignment="CENTER" translateY="2.0">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="WHITE" layoutX="60.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MONTANT MAX" textAlignment="CENTER">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="valDiff" fill="#bf6060" layoutX="-2.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DIFFERENCE" textAlignment="CENTER" wrappingWidth="187.8408203125">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="valMax" fill="#7ed097" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VALUE MAX" textAlignment="CENTER" translateY="3.0" wrappingWidth="186.02783203125">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="messageOutput" fill="#67b97f" layoutX="1.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MESSAGE" textAlignment="CENTER" visible="false" wrappingWidth="184.72900390625">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </Pane>
+                        <TextField fx:id="montantHypo" prefHeight="19.0" prefWidth="125.0" promptText="MONTANT" scaleX="0.9" style="-fx-background-color: rgb(30,30,30); -fx-background-radius: 15;" stylesheets="@style.css" translateY="15.0" visible="false" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="9.0" />
+                           </font>
+                        </TextField>
+                        <Pane fx:id="comGlobalPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: rgb(31,31,31); -fx-background-radius: 5;" visible="false" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="12.0" right="12.0" />
+                           </GridPane.margin>
+                           <children>
+                              <Text fill="#ffffff80" layoutX="7.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: 600;" text="COMMANDES GLOBALES" textAlignment="CENTER" wrappingWidth="166.74916076660156">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="#ff9b9b80" layoutX="7.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: 600;" text="Ses commandes affecteront tous les comptes" textAlignment="CENTER" wrappingWidth="166.74916076660156">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </Text>
+                              <Button fx:id="buttonMarge" layoutX="40.0" layoutY="132.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="101.0" style="-fx-background-color: rgb(45,45,45);" stylesheets="@style.css" text="AUGMENTER MARGE" textAlignment="CENTER" textFill="#ffffff80">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="buttonInteret" layoutX="40.0" layoutY="103.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="101.0" style="-fx-background-color: rgb(45,45,45);" stylesheets="@style.css" text="PAYER INTÉRÊT" textAlignment="CENTER" textFill="#ffffff80">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </Button>
+                              <Text fx:id="msgSuccess" fill="#87ffae80" layoutX="7.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: 600;" text="[Insert message success]" textAlignment="CENTER" visible="false" wrappingWidth="166.74916076660156">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </Pane>
+                     </children>
+                  </GridPane>
+               </right>
+               <top>
+                  <Pane prefHeight="25.0" prefWidth="496.0" scaleX="0.45" translateX="110.0" translateY="20.0" BorderPane.alignment="CENTER">
+                     <BorderPane.margin>
+                        <Insets bottom="-20.0" />
+                     </BorderPane.margin>
+                     <children>
+                        <Pane layoutX="10.0" layoutY="12.0" prefHeight="3.0" prefWidth="445.0" style="-fx-background-color: rgb(19,19,19,0.75); -fx-background-radius: 15;" translateY="10.0" />
+                        <Text fill="#ffffff80" layoutX="157.0" layoutY="18.0" scaleX="2.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: 600;" text="PANEL" textAlignment="CENTER" translateX="-10.0" translateY="-5.0" wrappingWidth="166.74916076660156">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Pane>
+               </top>
+            </BorderPane>
+         </left>
+         <right>
+            <Pane fx:id="leftPaneClient" prefHeight="0.0" prefWidth="250.0" style="-fx-background-color: rgb(42,42,42,0.75); -fx-background-radius: 15;" BorderPane.alignment="CENTER">
+               <children>
+                  <ScrollPane fx:id="transactions" hbarPolicy="NEVER" hmax="0.0" layoutX="13.0" layoutY="42.0" prefHeight="271.0" prefWidth="228.0" style="-fx-background-color: rgb(1,1,1,0); -fx-border-color: rgb(2,2,2,0);" stylesheets="@style.css" vmax="10.0" vmin="8.75">
+                     <content>
+                        <AnchorPane fx:id="holder" minHeight="0.0" minWidth="0.0" prefHeight="1000.0" prefWidth="234.0" translateY="5130.0" />
+                     </content>
+                  </ScrollPane>
+                  <TextField fx:id="rechercheTransactionField" layoutX="15.0" layoutY="14.0" prefHeight="5.0" prefWidth="220.0" promptText="RECHERCHE " style="-fx-background-color: rgb(27,27,27,0.75); -fx-background-radius: 15;" stylesheets="@style.css">
+                     <font>
+                        <Font size="9.0" />
+                     </font>
+                  </TextField>
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="20.0" right="15.0" top="75.0" />
+               </BorderPane.margin>
+            </Pane>
+         </right>
+      </BorderPane>
+      <Button fx:id="fermerGuichet" layoutX="672.0" layoutY="2.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="101.0" style="-fx-background-color: rgb(45,45,45,0);" stylesheets="@style.css" text="FERMER GUICHET" textAlignment="CENTER" textFill="#ffffff80" translateX="-2.5" translateY="30.0">
+         <font>
+            <Font size="9.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

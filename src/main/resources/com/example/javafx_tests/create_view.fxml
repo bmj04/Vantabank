@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: rgb(44,44,44);" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Application.Controller.CreateController">
+   <children>
+      <BorderPane layoutX="14.0" layoutY="25.0" prefHeight="450.0" prefWidth="760.0" style="-fx-background-color: rgb(29,29,29); -fx-background-radius: 15;" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="26.0">
+         <top>
+            <Pane prefHeight="100.0" prefWidth="758.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Text fill="#ffffff80" layoutX="423.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: 600;" text="PERSONNALISATION">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#ffffff80" layoutX="233.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: 600;" text="APERÇU">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="retour" layoutX="48.0" layoutY="21.0" mnemonicParsing="false" opacity="0.75" stylesheets="@style.css" text="RETOUR" textFill="#ffffff80">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Button>
+                  <Text fx:id="date" fill="#ffffff80" layoutX="663.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DATA TIME" />
+                  <Text fill="#ffffff80" layoutX="269.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CRÉATION DE COMPTE">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Text>
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="-80.0" top="20.0" />
+               </BorderPane.margin>
+            </Pane>
+         </top>
+         <center>
+            <BorderPane fx:id="rightBorderPane" prefHeight="377.0" prefWidth="450.0" style="-fx-background-color: rgb(42,42,42,0.75); -fx-background-radius: 15;" BorderPane.alignment="CENTER">
+               <left>
+                  <Pane fx:id="accountOverviewClient" prefHeight="267.0" prefWidth="215.0" style="-fx-background-color: rgb(49,49,49,0.75); -fx-background-radius: 5;" BorderPane.alignment="CENTER">
+                     <BorderPane.margin>
+                        <Insets bottom="10.0" left="20.0" right="5.0" top="5.0" />
+                     </BorderPane.margin>
+                     <children>
+                        <BorderPane layoutX="8.0" layoutY="105.0" prefHeight="131.0" prefWidth="200.0">
+                           <top>
+                              <Pane prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: rgb(29,29,29); -fx-background-radius: 5;" BorderPane.alignment="CENTER">
+                                 <BorderPane.margin>
+                                    <Insets left="20.0" right="20.0" />
+                                 </BorderPane.margin>
+                                 <children>
+                                    <Text fx:id="typeCompte1" fill="#ffffff80" layoutX="5.0" layoutY="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RETRAIT MAX">
+                                       <font>
+                                          <Font size="8.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="montantRetrait" fill="WHITE" layoutX="5.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="montant">
+                                       <font>
+                                          <Font size="8.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </Pane>
+                           </top>
+                           <center>
+                              <Pane prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: rgb(29,29,29); -fx-background-radius: 5;" BorderPane.alignment="CENTER">
+                                 <BorderPane.margin>
+                                    <Insets bottom="5.0" left="20.0" right="20.0" top="3.0" />
+                                 </BorderPane.margin>
+                                 <children>
+                                    <Text fx:id="typeCompte11" fill="#ffffff80" layoutX="5.0" layoutY="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TRANSFERT MAX">
+                                       <font>
+                                          <Font size="8.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="montantTransfert" fill="WHITE" layoutX="6.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="montant">
+                                       <font>
+                                          <Font size="8.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </Pane>
+                           </center>
+                           <bottom>
+                              <Pane fx:id="caseExtra" prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: rgb(29,29,29); -fx-background-radius: 5;" BorderPane.alignment="CENTER">
+                                 <BorderPane.margin>
+                                    <Insets bottom="20.0" left="20.0" right="20.0" />
+                                 </BorderPane.margin>
+                                 <children>
+                                    <Text fx:id="typeAttribut" fill="#ffffff80" layoutX="5.0" layoutY="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DÉPOT RÉGULIER">
+                                       <font>
+                                          <Font size="8.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="montantDépotRégulier" fill="WHITE" layoutX="6.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="montant">
+                                       <font>
+                                          <Font size="8.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </Pane>
+                           </bottom>
+                        </BorderPane>
+                        <Pane layoutX="12.0" layoutY="247.0" prefHeight="12.0" prefWidth="149.0" style="-fx-background-color: rgb(37,37,37); -fx-background-radius: 15;">
+                           <children>
+                              <Text fx:id="numeroCompte" fill="#ffffff80" layoutX="4.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" wrappingWidth="22.13671875">
+                                 <font>
+                                    <Font size="7.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="12.0" layoutY="269.0" prefHeight="12.0" prefWidth="57.0" style="-fx-background-color: rgb(37,37,37); -fx-background-radius: 15;">
+                           <children>
+                              <Text fx:id="nip" fill="#ffffff80" layoutX="4.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" wrappingWidth="22.13671875">
+                                 <font>
+                                    <Font size="7.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </Pane>
+                        <Text fx:id="montant11" fill="#ffffff80" layoutX="14.0" layoutY="267.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NIP">
+                           <font>
+                              <Font size="7.0" />
+                           </font>
+                        </Text>
+                        <Pane fx:id="paneInfoExtra" layoutX="40.0" layoutY="7.0" prefHeight="65.0" prefWidth="135.0" style="-fx-background-color: rgb(255,255,255,0);">
+                           <children>
+                              <Text fx:id="typeCompte" fill="#ffffff80" layoutX="5.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CHEQUE" textAlignment="CENTER" wrappingWidth="124.65625">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="montant" fill="WHITE" layoutX="2.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0.00 $" textAlignment="CENTER" wrappingWidth="131.81640625">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="extraInfo" fill="#ffffff80" layoutX="4.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ATTRIBUT" textAlignment="CENTER" wrappingWidth="124.65625">
+                                 <font>
+                                    <Font size="7.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="valeurInfo" fill="WHITE" layoutX="1.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VALEUR" textAlignment="CENTER" wrappingWidth="131.81640625">
+                                 <font>
+                                    <Font size="8.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </Pane>
+                        <Text fx:id="montant1" fill="#ffffff80" layoutX="14.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NO COMPTE">
+                           <font>
+                              <Font size="7.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Pane>
+               </left>
+               <top>
+                  <BorderPane prefHeight="11.0" prefWidth="467.0" translateX="-7.0" BorderPane.alignment="CENTER">
+                     <BorderPane.margin>
+                        <Insets left="20.0" top="10.0" />
+                     </BorderPane.margin>
+                     <center>
+                        <Pane prefHeight="45.0" prefWidth="455.0" scaleX="0.95" scaleY="0.35" style="-fx-background-color: rgb(8,8,8,0.75); -fx-background-radius: 15;" BorderPane.alignment="CENTER">
+                           <BorderPane.margin>
+                              <Insets />
+                           </BorderPane.margin>
+                        </Pane>
+                     </center>
+                  </BorderPane>
+               </top>
+               <BorderPane.margin>
+                  <Insets bottom="20.0" left="135.0" right="150.0" top="75.0" />
+               </BorderPane.margin>
+               <right>
+                  <GridPane prefHeight="269.0" prefWidth="200.0" style="-fx-background-color: rgb(49,49,49,0.75); -fx-background-radius: 5;" BorderPane.alignment="CENTER">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="92.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="93.0" minHeight="10.0" prefHeight="29.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="177.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="177.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="177.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="177.0" minHeight="10.0" prefHeight="126.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <BorderPane.margin>
+                        <Insets bottom="10.0" left="20.0" right="15.0" top="5.0" />
+                     </BorderPane.margin>
+                     <children>
+                        <Text fill="#ffffffbf" fontSmoothingType="LCD" opacity="0.65" stroke="#75ad63bf" strokeType="OUTSIDE" strokeWidth="0.0" text="TYPE DE COMPTE" textAlignment="CENTER" wrappingWidth="100.34130859375" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#ffffffbf" fontSmoothingType="LCD" layoutX="10.0" layoutY="38.0" opacity="0.65" stroke="#75ad63bf" strokeType="OUTSIDE" strokeWidth="0.0" text="RETRAIT MAX" textAlignment="CENTER" wrappingWidth="100.34130859375" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#ffffffbf" fontSmoothingType="LCD" layoutX="10.0" layoutY="65.0" opacity="0.65" stroke="#75ad63bf" strokeType="OUTSIDE" strokeWidth="0.0" text="TRANSFERT MAX" textAlignment="CENTER" wrappingWidth="100.34130859375" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#ffffffbf" fontSmoothingType="LCD" layoutX="10.0" layoutY="195.0" opacity="0.65" stroke="#75ad63bf" strokeType="OUTSIDE" strokeWidth="0.0" text="NIP" textAlignment="CENTER" wrappingWidth="100.34130859375" GridPane.rowIndex="4">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Text>
+                        <ComboBox fx:id="typeCompteValue" prefHeight="34.0" prefWidth="100.0" promptText="TYPE" scaleX="0.75" scaleY="0.7" style="-fx-background-color: rgb(21,21,21,0.75);" stylesheets="@style.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <padding>
+                              <Insets left="5.0" right="5.0" />
+                           </padding>
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                        </ComboBox>
+                        <TextField fx:id="retraitMontant" promptText="MONTANT" scaleX="0.9" scaleY="0.9" style="-fx-background-color: rgb(21,21,21,0.75);" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="9.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="transfertMontant" layoutX="110.0" layoutY="82.0" promptText="MONTANT" scaleX="0.9" scaleY="0.9" style="-fx-background-color: rgb(21,21,21,0.75);" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="9.0" />
+                           </font>
+                        </TextField>
+                        <Pane prefHeight="102.0" prefWidth="100.0" scaleX="1.75" scaleY="0.8" style="-fx-background-color: rgb(26,26,26,0.75); -fx-background-radius: 5;" translateX="50.0" translateY="5.0" GridPane.rowIndex="5">
+                           <children>
+                              <Button fx:id="submit" layoutX="-35.0" layoutY="67.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="171.0" scaleX="0.5" style="-fx-background-color: rgb(20,20,20,0.5);" stylesheets="@style.css" text="CONFIRMER" textFill="#ffffffbf" translateY="12.5">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Text fill="#ffffffbf" layoutX="-39.0" layoutY="28.0" scaleX="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="SOUMETTRE REQUETE DE CRÉATION DE COMPTE" textAlignment="CENTER" wrappingWidth="180.26879024505615" />
+                              <Text fx:id="messageOutput" fill="#61965e" layoutX="-51.0" layoutY="66.0" scaleX="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="[INSERT SUCCESS TEXT]" textAlignment="CENTER" visible="false" wrappingWidth="201.71242022514343">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </Pane>
+                        <Text fill="#ffffffa6" strokeType="OUTSIDE" strokeWidth="0.0" text="PARAMÈTRES" textAlignment="CENTER" underline="true" wrappingWidth="199.9830722808838">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <PasswordField fx:id="nipValue" promptText="NIP" scaleX="0.9" scaleY="0.9" style="-fx-background-color: rgb(21,21,21,0.75);" stylesheets="@style.css" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                     </children>
+                  </GridPane>
+               </right>
+            </BorderPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
